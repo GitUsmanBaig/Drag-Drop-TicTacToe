@@ -54,8 +54,8 @@ body {
     height: 100vh;
     width: 100%;
     background-image: url("./images/start-background.jpg");
-    background-size: cover; /* This will make the image cover the entire container */
-    background-repeat: no-repeat; /* This ensures the image does not repeat */
+    background-size: cover; 
+    background-repeat: no-repeat; 
     background-position: center;
 }
 
@@ -69,11 +69,11 @@ body {
 }
 
 .game-title-1{
-    font-size: 4em; /* Makes the text larger */ ;
+    font-size: 4em; 
 }
 
 .game-title-2{
-    font-size: 2em; /* Makes the text larger */ ;
+    font-size: 2em; 
 }
 
 #start-button {
@@ -92,7 +92,6 @@ body {
     background-color: #c57777;
 }
 
-/*victory modal css*/
 .victory-modal {
     display: none;
     position: fixed;
