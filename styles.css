@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #010101;
+    padding: 0;
+    margin: 0;
+    color:white
+}
+
+#turn-display {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20%;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #e47878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    box-shadow: 0 0 10px #e47878;
+
+}
+
+.cell.x, .cell.o {
+    cursor: move;
+    color: #ffffff;
+}
+
+
+/*startpage css*/
+.start-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./images/start-background.jpg");
+    background-size: cover; /* This will make the image cover the entire container */
+    background-repeat: no-repeat; /* This ensures the image does not repeat */
+    background-position: center;
+}
+
+.game-title {
+    color: #f1f1f0; 
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+.game-title-1{
+    font-size: 4em; /* Makes the text larger */ ;
+}
+
+.game-title-2{
+    font-size: 2em; /* Makes the text larger */ ;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fd0000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #c57777;
+}
+
+/*victory modal css*/
+.victory-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.victory-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.victory-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#victoryMessage{
+    font-size: 2em;
+    color: rgb(8, 8, 8);
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fd0000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 90%;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #c57777;
+}
+
+
+
+@media (max-width: 500px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+    }
+
+
+    #turn-display {
+        font-size: 16px;
+        margin-right: 10%;
+    }
+
+    .game-title-1 {
+        font-size: 1.5em;
+    }
+
+    .game-title-2 {
+        font-size: 1em;
+    }
+
+    .victory-content {
+        width: 80%;
+        padding: 5px;
+    }
+
+    #victoryMessage {
+        font-size: 1.5em;
+    }
+
+    #restartButton, #start-button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+
+
